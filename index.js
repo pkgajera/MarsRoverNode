@@ -66,14 +66,14 @@ turnRightBy90 = () => {
 
 moveRoverOneStepAhead = () => {
   if (rover.directionFacing === rover["N"]) {
-    // check whether rover is colliding with boundaries specified
+    // check whether rover is colliding with Y axis boundaries specified
     if (rover.posY < rover.boundY) rover.posY++;
     else
       console.log(
         `Rover can't move ahead of the boundary coordinates of the plateau in y coordinate`
       );
   } else if (rover.directionFacing === rover["E"]) {
-    // check whether rover is colliding with boundaries specified
+    // check whether rover is colliding with X axis boundaries specified
     if (rover.posX < rover.boundX) rover.posX++;
     else
       console.log(
@@ -85,8 +85,6 @@ moveRoverOneStepAhead = () => {
     rover.posX--;
   }
 };
-
-checkBoundariesCollision = () => {};
 
 executeCommands = (commands) => {
   commands = commands.split("");
